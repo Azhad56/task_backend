@@ -1,0 +1,33 @@
+{
+  "name": "task_backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "prestart": "npm run build",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "lint": "oxlint src tests"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.3.0",
+    "mongoose": "^9.12.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.19.2",
+    "@types/supertest": "^6.0.3",
+    "mongodb-memory-server": "^11.3.0",
+    "oxlint": "^1.90.0",
+    "supertest": "^7.1.4",
+    "tsx": "^4.21.0",
+    "typescript": "~7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
